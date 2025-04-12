@@ -228,23 +228,20 @@ namespace AuditMetrics
 
         static void Main(string[] args)
         {
-            if (funcLicenseCheck())
+            if (args.Length == 0)
             {
-                if (args.Length == 0)
+                Console.WriteLine("Parameters must be specified to run AuditMetrics.");
+                Console.WriteLine("Run AuditMetrics -? to get the parameter syntax.");
+            }
+            else
+            {
+                if (args[0] == "-?")
                 {
-                    Console.WriteLine("Parameters must be specified to run AuditMetrics.");
-                    Console.WriteLine("Run AuditMetrics -? to get the parameter syntax.");
+                    funcPrintParameterSyntax();
                 }
                 else
                 {
-                    if (args[0] == "-?")
-                    {
-                        funcPrintParameterSyntax();
-                    }
-                    else
-                    {
-                        funcGetMetrics();
-                    }
+                    funcGetMetrics();
                 }
             }
         }
