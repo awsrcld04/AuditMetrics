@@ -41,7 +41,7 @@ namespace AuditMetrics
 
         static void funcPrintParameterSyntax()
         {
-            Console.WriteLine("AccountVerifier v1.0 (c) 2011 SystemsAdminPro.com");
+            Console.WriteLine("AccountVerifier v1.0");
             Console.WriteLine();
             Console.WriteLine("Parameter syntax:");
             Console.WriteLine();
